@@ -21,6 +21,7 @@ struct ColorSliderView: View {
                 .tint(tintColor)
             
             TextField("", value: $colorValue, formatter: NumberFormatter())
+                .keyboardType(.decimalPad)
                 .multilineTextAlignment(.trailing)
                 .padding([.horizontal], 4)
                 .frame(width: 50, height: 30)
