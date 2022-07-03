@@ -8,28 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var redValue = Double.random(in: 0...255)
-    @State private var greenValue = Double.random(in: 0...255)
-    @State private var blueValue = Double.random(in: 0...255)
+    @State private var red = Double.random(in: 0...255)
+    @State private var green = Double.random(in: 0...255)
+    @State private var blue = Double.random(in: 0...255)
     
     var body: some View {
-        let constructedColor = Color(red: redValue / 255,
-                               green: greenValue / 255,
-                               blue: blueValue / 255)
         
         ZStack {
             Color(red: 44 / 255, green: 96 / 255, blue: 185 / 255)
                 .ignoresSafeArea()
             
             VStack {
-                ColorView(color: constructedColor)
+                ColorView(red: red, green: green, blue: blue)
+                    .padding([.top, .bottom], 16)
                 
-                ColorSliderView(colorValue: $redValue, tintColor: .red)
-                ColorSliderView(colorValue: $greenValue, tintColor: .green)
-                ColorSliderView(colorValue: $blueValue, tintColor: .blue)
-                
+                ColorSliderView(colorValue: $red, tintColor: .red)
+                ColorSliderView(colorValue: $green, tintColor: .green)
+                ColorSliderView(colorValue: $blue, tintColor: .blue)
+                Spacer()
             }
-            .padding(.top, -250)
+            .padding()
         }
         .ignoresSafeArea(.keyboard)
         .onTapGesture{

@@ -13,23 +13,38 @@ struct ColorSliderView: View {
     
     var body: some View {
         HStack {
-            Text("\(lround(colorValue))")
-                .foregroundColor(.white)
-                .frame(width: 32)
+            colorLabel(colorValue: colorValue)
             
             Slider(value: $colorValue, in: 0...255, step: 1)
                 .tint(tintColor)
             
-            TextField("", value: $colorValue, formatter: NumberFormatter())
-                .keyboardType(.decimalPad)
-                .multilineTextAlignment(.trailing)
-                .padding([.horizontal], 4)
-                .frame(width: 50, height: 30)
-                .background(Color.white)
-                .cornerRadius(5)
-                .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.white))
+            colorTextField(colorValue: $colorValue)
         }
-        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+    }
+}
+
+struct colorLabel: View {
+    let colorValue: Double
+    
+    var body: some View {
+        Text("\(lround(colorValue))")
+            .foregroundColor(.white)
+            .frame(width: 32)
+    }
+}
+
+struct colorTextField: View {
+    @Binding var colorValue: Double
+    
+    var body: some View {
+        TextField("", value: $colorValue, formatter: NumberFormatter())
+            .keyboardType(.decimalPad)
+            .multilineTextAlignment(.trailing)
+            .padding([.horizontal], 4)
+            .frame(width: 50, height: 30)
+            .background(Color.white)
+            .cornerRadius(5)
+            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.white))
     }
 }
 
