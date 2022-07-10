@@ -35,6 +35,12 @@ struct ContentView: View {
             .padding()
             .toolbar {
                 ToolbarItemGroup (placement: .keyboard) {
+                    Button(action: previousField) {
+                        Image(systemName: "chevron.up")
+                    }
+                    Button(action: nextField) {
+                        Image(systemName: "chevron.down")
+                    }
                     Spacer()
                     Button("Done") {
                         focusedField = nil
@@ -46,6 +52,33 @@ struct ContentView: View {
             focusedField = nil
         }
     }
+    
+    private func previousField() {
+        switch focusedField {
+        case .red:
+            focusedField = .blue
+        case .green:
+            focusedField = .red
+        case .blue:
+            focusedField = .green
+        case .none:
+            focusedField = nil
+        }
+    }
+    
+    private func nextField() {
+        switch focusedField {
+        case .red:
+            focusedField = .green
+        case .green:
+            focusedField = .blue
+        case .blue:
+            focusedField = .red
+        case .none:
+            focusedField = nil
+        }
+    }
+    
 }
 
 extension ContentView {
