@@ -22,9 +22,9 @@ struct ContentView: View {
                 ColorView(red: red, green: green, blue: blue)
                     .padding([.top, .bottom], 16)
                 
-                ColorSliderView(colorValue: $red, tintColor: .red)
-                ColorSliderView(colorValue: $green, tintColor: .green)
-                ColorSliderView(colorValue: $blue, tintColor: .blue)
+                ColorSliderView(sliderValue: $red, tintColor: .red)
+                ColorSliderView(sliderValue: $green, tintColor: .green)
+                ColorSliderView(sliderValue: $blue, tintColor: .blue)
                 Spacer()
             }
             .padding()
