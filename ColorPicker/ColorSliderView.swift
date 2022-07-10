@@ -15,7 +15,7 @@ struct ColorSliderView: View {
     
     var body: some View {
         HStack {
-            colorLabel(colorValue: sliderValue)
+            ColorValueTextView(colorValue: sliderValue)
             
             Slider(value: $sliderValue, in: 0...255, step: 1)
                 .tint(tintColor)
@@ -23,48 +23,11 @@ struct ColorSliderView: View {
                     textValue = String(lround(sliderValue))
                 }
             
-            colorTextField(textValue: $textValue, value: $sliderValue)
+            ColorValueTFView(textValue: $textValue, value: $sliderValue)
         }
         .onAppear {
             textValue = String(lround(sliderValue))
         }
-    }
-}
-
-struct colorLabel: View {
-    let colorValue: Double
-    
-    var body: some View {
-        Text("\(lround(colorValue))")
-            .foregroundColor(.white)
-            .frame(width: 32)
-    }
-}
-
-struct colorTextField: View {
-    @Binding var textValue: String
-    @Binding var value: Double
-    
-    var body: some View {
-        TextField("", text: $textValue) { _ in
-            checkValue()
-        }
-            .keyboardType(.decimalPad)
-            .multilineTextAlignment(.trailing)
-            .padding([.horizontal], 4)
-            .frame(width: 50, height: 30)
-            .background(Color.white)
-            .cornerRadius(5)
-            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.white))
-    }
-    
-    private func checkValue() {
-        if let value = Int(textValue), (0...255).contains(value) {
-            self.value = Double(value)
-            return
-        }
-        value = 0
-        textValue = "0"
     }
 }
 
