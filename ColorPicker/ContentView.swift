@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var green = Double.random(in: 0...255)
     @State private var blue = Double.random(in: 0...255)
     
+    @FocusState private var focusedField: Field?
+    
     var body: some View {
         
         ZStack {
@@ -23,18 +25,35 @@ struct ContentView: View {
                     .padding([.top, .bottom], 16)
                 
                 ColorSliderView(sliderValue: $red, tintColor: .red)
+                    .focused($focusedField, equals: .red)
                 ColorSliderView(sliderValue: $green, tintColor: .green)
+                    .focused($focusedField, equals: .green)
                 ColorSliderView(sliderValue: $blue, tintColor: .blue)
+                    .focused($focusedField, equals: .blue)
                 Spacer()
             }
             .padding()
+            .toolbar {
+                ToolbarItemGroup (placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        focusedField = nil
+                    }
+                }
+            }
         }
-        .ignoresSafeArea(.keyboard)
-        .onTapGesture{
-            hideKeyboard()
+        .onTapGesture {
+            focusedField = nil
         }
     }
-    
+}
+
+extension ContentView {
+    enum Field {
+        case red
+        case green
+        case blue
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
