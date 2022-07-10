@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B15B6436287B7B3600B9F58A /* ColorValueTFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15B6435287B7B3600B9F58A /* ColorValueTFView.swift */; };
+		B15B6438287B7B4600B9F58A /* ColorValueTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15B6437287B7B4600B9F58A /* ColorValueTextView.swift */; };
 		B1C99B40286E3F5700FAF70F /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C99B3F286E3F5700FAF70F /* ColorView.swift */; };
 		B1C99B42286E3FC800FAF70F /* ColorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C99B41286E3FC800FAF70F /* ColorSliderView.swift */; };
 		B1C99B44286E409000FAF70F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C99B43286E409000FAF70F /* View+Extensions.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B15B6435287B7B3600B9F58A /* ColorValueTFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorValueTFView.swift; sourceTree = "<group>"; };
+		B15B6437287B7B4600B9F58A /* ColorValueTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorValueTextView.swift; sourceTree = "<group>"; };
 		B1C99B3F286E3F5700FAF70F /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		B1C99B41286E3FC800FAF70F /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
 		B1C99B43286E409000FAF70F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				B1DE5010286B844500A38674 /* ContentView.swift */,
 				B1C99B3F286E3F5700FAF70F /* ColorView.swift */,
 				B1C99B41286E3FC800FAF70F /* ColorSliderView.swift */,
+				B15B6435287B7B3600B9F58A /* ColorValueTFView.swift */,
+				B15B6437287B7B4600B9F58A /* ColorValueTextView.swift */,
 				B1C99B43286E409000FAF70F /* View+Extensions.swift */,
 				B1DE5012286B844B00A38674 /* Assets.xcassets */,
 				B1DE5014286B844B00A38674 /* Preview Content */,
@@ -148,7 +154,9 @@
 			files = (
 				B1C99B40286E3F5700FAF70F /* ColorView.swift in Sources */,
 				B1C99B42286E3FC800FAF70F /* ColorSliderView.swift in Sources */,
+				B15B6436287B7B3600B9F58A /* ColorValueTFView.swift in Sources */,
 				B1DE5011286B844500A38674 /* ContentView.swift in Sources */,
+				B15B6438287B7B4600B9F58A /* ColorValueTextView.swift in Sources */,
 				B1C99B44286E409000FAF70F /* View+Extensions.swift in Sources */,
 				B1DE500F286B844500A38674 /* ColorPickerApp.swift in Sources */,
 			);

@@ -11,6 +11,8 @@ struct ColorValueTFView: View {
     @Binding var textValue: String
     @Binding var value: Double
     
+    @State private var showAlert = false
+    
     var body: some View {
         TextField("", text: $textValue) { _ in
             checkValue()
@@ -21,7 +23,9 @@ struct ColorValueTFView: View {
             .frame(width: 50, height: 30)
             .background(Color.white)
             .cornerRadius(5)
-            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.white))
+            .alert("Wrong Format", isPresented: $showAlert, actions: {}) {
+                Text("Please enter value from 0 to 255")
+            }
     }
     
     private func checkValue() {
@@ -29,6 +33,7 @@ struct ColorValueTFView: View {
             self.value = Double(value)
             return
         }
+        showAlert.toggle()
         value = 0
         textValue = "0"
     }
