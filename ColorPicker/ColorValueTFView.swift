@@ -15,7 +15,9 @@ struct ColorValueTFView: View {
     
     var body: some View {
         TextField("", text: $textValue) { _ in
-            checkValue()
+            withAnimation {
+                checkValue()
+            }
         }
             .keyboardType(.decimalPad)
             .multilineTextAlignment(.trailing)
