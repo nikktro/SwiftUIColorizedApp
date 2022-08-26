@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B11F16B628B8ECAE00832541 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11F16B528B8ECAE00832541 /* StarterView.swift */; };
 		B15B6436287B7B3600B9F58A /* ColorValueTFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15B6435287B7B3600B9F58A /* ColorValueTFView.swift */; };
 		B15B6438287B7B4600B9F58A /* ColorValueTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15B6437287B7B4600B9F58A /* ColorValueTextView.swift */; };
 		B1C99B40286E3F5700FAF70F /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C99B3F286E3F5700FAF70F /* ColorView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B11F16B528B8ECAE00832541 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
 		B15B6435287B7B3600B9F58A /* ColorValueTFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorValueTFView.swift; sourceTree = "<group>"; };
 		B15B6437287B7B4600B9F58A /* ColorValueTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorValueTextView.swift; sourceTree = "<group>"; };
 		B1C99B3F286E3F5700FAF70F /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				B1DE500E286B844500A38674 /* ColorPickerApp.swift */,
+				B11F16B528B8ECAE00832541 /* StarterView.swift */,
 				B1DE5010286B844500A38674 /* ContentView.swift */,
 				B1C99B3F286E3F5700FAF70F /* ColorView.swift */,
 				B1C99B41286E3FC800FAF70F /* ColorSliderView.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11F16B628B8ECAE00832541 /* StarterView.swift in Sources */,
 				B1C99B40286E3F5700FAF70F /* ColorView.swift in Sources */,
 				B1C99B42286E3FC800FAF70F /* ColorSliderView.swift in Sources */,
 				B15B6436287B7B3600B9F58A /* ColorValueTFView.swift in Sources */,
@@ -211,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -265,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -297,7 +301,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.ColorPicker;
+				PRODUCT_BUNDLE_IDENTIFIER = home.SwiftUIColorizedApp;
 				PRODUCT_NAME = SwiftUIColorizedApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,7 +331,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = home.ColorPicker;
+				PRODUCT_BUNDLE_IDENTIFIER = home.SwiftUIColorizedApp;
 				PRODUCT_NAME = SwiftUIColorizedApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
